@@ -3,13 +3,19 @@ export interface Post {
   title: string;
   content: string;
   created_at: Date;
-  img_path: string;
+  img_path?: string;
 }
 
 export interface CreatePostDTO {
   title: string;
   content: string;
-  img_path: string;
+  img_path?: string;
+}
+
+export interface UpdatePostDTO {
+  title?: string;
+  content?: string;
+  img_path?: string;
 }
 
 export interface ContactMe {
