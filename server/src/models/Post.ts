@@ -3,7 +3,7 @@ import pool from './db';
 
 export class PostModel {
   static async getAll(): Promise<Post[]> {
-    const result = await pool.query('SELECT * FROM posts');
+    const result = await pool.query('SELECT * FROM posts ORDER BY created_at');
     return result.rows;
   }
   static async getById(id: number): Promise<Post | undefined> {
