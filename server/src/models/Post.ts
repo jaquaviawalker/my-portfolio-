@@ -26,7 +26,6 @@ export class PostModel {
     const values = [];
     let paramCount = 1;
 
-    // Build SET clause dynamically
     if (updates.title !== undefined) {
       fields.push(`title = $${paramCount++}`);
       values.push(updates.title);
@@ -42,12 +41,10 @@ export class PostModel {
       values.push(updates.img_path);
     }
 
-    // If no fields to update, return early
     if (fields.length === 0) {
       throw new Error('No fields to update');
     }
 
-    // Add id as the last parameter
     values.push(id);
 
     const query = `

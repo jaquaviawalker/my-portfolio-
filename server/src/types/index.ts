@@ -18,7 +18,7 @@ export interface UpdatePostDTO {
   img_path?: string;
 }
 
-export interface ContactMe {
+export interface Contact {
   id: number;
   name: string;
   email: string;

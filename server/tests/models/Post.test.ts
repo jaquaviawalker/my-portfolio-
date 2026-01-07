@@ -1,5 +1,4 @@
 import { PostModel } from '../../src/models/Post';
-import { Post, CreatePostDTO, UpdatePostDTO } from '../../src/types';
 import pool from '../../src/models/db';
 
 jest.mock('../../src/models/db', () => ({
